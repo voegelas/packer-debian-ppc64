@@ -9,7 +9,7 @@ order bugs.
 
 Requires [packer](https://www.packer.io/),
 [vagrant](https://www.vagrantup.com/), [libvirt](https://libvirt.org/),
-[vagrant-libirt](https://github.com/vagrant-libvirt/vagrant-libvirt) and
+[vagrant-libvirt](https://github.com/vagrant-libvirt/vagrant-libvirt) and
 [qemu-system-ppc](https://www.qemu.org/).
 
 ## USAGE
