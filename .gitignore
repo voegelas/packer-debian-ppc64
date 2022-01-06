@@ -1,0 +1,5 @@
+packer_cache/*
+output-qemu/*
+*.box
+*.qcow2
+.vagrant/*
