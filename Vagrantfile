@@ -7,8 +7,8 @@ Vagrant.configure("2") do |config|
 
   # libvirt.
   config.vm.define "libvirt" do |libvirt|
-    libvirt.vm.hostname = "libvirt-debian11-ppc64"
-    libvirt.vm.box = "file://builds/libvirt-debian11-ppc64.box"
+    libvirt.vm.hostname = "libvirt-debian-ppc64"
+    libvirt.vm.box = "file://builds/libvirt-debian-ppc64.box"
 
     config.vm.provider :libvirt do |v|
       v.driver = "qemu"

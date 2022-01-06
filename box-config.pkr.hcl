@@ -1,7 +1,7 @@
 
 variable "box_tag" {
   type    = string
-  default = "voegelas/debian11-ppc64"
+  default = "voegelas/debian-ppc64"
 }
 
 variable "headless" {
@@ -19,7 +19,7 @@ variable "version_description" {
   default = ""
 }
 
-source "qemu" "debian11-ppc64" {
+source "qemu" "debian-ppc64" {
   accelerator        = "tcg"
   cpus               = 1
   disk_detect_zeroes = "unmap"
@@ -30,7 +30,7 @@ source "qemu" "debian11-ppc64" {
   format             = "qcow2"
   headless           = "${var.headless}"
   iso_checksum       = "sha256:ddb0ef178016ea6263a7f19f7186273e1a89ee35d624c921a79abd126da6ecfc"
-  iso_urls           = ["debian11-ppc64.qcow2", "http://mirror.andreasvoegele.com/qemu/debian11-ppc64.qcow2"]
+  iso_urls           = ["debian-ppc64.qcow2", "http://mirror.andreasvoegele.com/qemu/debian-ppc64.qcow2"]
   machine_type       = "pseries"
   memory             = 1024
   net_device         = "virtio-net"
@@ -40,11 +40,11 @@ source "qemu" "debian11-ppc64" {
   ssh_password       = "vagrant"
   ssh_timeout        = "30m"
   ssh_username       = "vagrant"
-  vm_name            = "packer-debian11-ppc64"
+  vm_name            = "packer-debian-ppc64"
 }
 
 build {
-  sources = ["source.qemu.debian11-ppc64"]
+  sources = ["source.qemu.debian-ppc64"]
 
   provisioner "shell" {
     execute_command = "echo 'vagrant' | {{ .Vars }} sudo -S -E bash '{{ .Path }}'"
@@ -58,7 +58,7 @@ build {
 
   post-processors {
     post-processor "vagrant" {
-      output = "builds/libvirt-debian11-ppc64.box"
+      output = "builds/libvirt-debian-ppc64.box"
     }
     post-processor "vagrant-cloud" {
       box_tag             = "${var.box_tag}"

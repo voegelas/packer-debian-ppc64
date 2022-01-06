@@ -1,4 +1,4 @@
-# packer-debian11-ppc64
+# packer-debian-ppc64
 
 Build a big-endian PowerPC Vagrant box for libvirt and qemu-system-ppc64.
 
