@@ -41,9 +41,9 @@ Put the following settings into your Vagrantfile:
           v.cpu_mode = "custom"
           v.cpu_model = "POWER8"
           v.video_type = "vga"
-       end
-     end
-   end
+        end
+      end
+    end
 
 ## LICENSE AND COPYRIGHT
 
