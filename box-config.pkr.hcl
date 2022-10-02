@@ -29,7 +29,7 @@ source "qemu" "debian-ppc64" {
   disk_size          = "80G"
   format             = "qcow2"
   headless           = "${var.headless}"
-  iso_checksum       = "sha256:87cdbd5acf7a5fa9c98be89d52f289d85e7d17e02901d6f1a760fe452c2077de"
+  iso_checksum       = "sha256:e5c55bb2994b58190d0cafad5f41794e2f93997281f6b8aa8e023154b8956d4e"
   iso_urls           = ["debian-ppc64.qcow2", "http://mirror.andreasvoegele.com/qemu/debian-ppc64.qcow2"]
   machine_type       = "pseries"
   memory             = 1024
