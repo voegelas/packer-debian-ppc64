@@ -47,7 +47,7 @@ Put the following settings into your Vagrantfile:
 
 ## LICENSE AND COPYRIGHT
 
-Copyright 2022 Andreas Vögele
+Copyright (C) 2022 Andreas Vögele
 
 This program is free software; you can redistribute and modify it under the
 terms of the ISC license.
