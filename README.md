@@ -21,11 +21,15 @@ Customize the scripts in the "scripts" directory or add
 Set the environment variable VAGRANT_CLOUD_TOKEN to your [access
 token](https://app.vagrantup.com/settings/security) for the Vagrant Cloud API.
 
+Install the required plugins:
+
+    packer init box-config.pkr.hcl
+
 Build and publish your box:
 
     packer build \
       -var 'box_tag=myname/mybox-ppc64' \
-      -var 'version=20220106' \
+      -var 'version=20230721' \
       -var 'version_description=My custom box' \
       box-config.pkr.hcl
 
@@ -47,7 +51,7 @@ Put the following settings into your Vagrantfile:
 
 ## LICENSE AND COPYRIGHT
 
-Copyright (C) 2022 Andreas Vögele
+Copyright (C) 2023 Andreas Vögele
 
 This program is free software; you can redistribute and modify it under the
 terms of the ISC license.

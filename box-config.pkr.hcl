@@ -19,6 +19,19 @@ variable "version_description" {
   default = ""
 }
 
+packer {
+  required_plugins {
+    qemu = {
+      source  = "github.com/hashicorp/qemu"
+      version = "~> 1"
+    }
+    vagrant = {
+      source  = "github.com/hashicorp/vagrant"
+      version = "~> 1"
+    }
+  }
+}
+
 source "qemu" "debian-ppc64" {
   accelerator        = "tcg"
   cpus               = 1
@@ -29,7 +42,7 @@ source "qemu" "debian-ppc64" {
   disk_size          = "80G"
   format             = "qcow2"
   headless           = "${var.headless}"
-  iso_checksum       = "sha256:c87d778aef90eeed3de0a9bc646ff33a58d468799ac9f0e49bb2c37c7201897a"
+  iso_checksum       = "sha256:3e02e5d42bd3354440eef13c70cc9f1c33322d865353dc7613621223124a42a7"
   iso_urls           = ["debian-ppc64.qcow2", "http://mirror.andreasvoegele.com/qemu/debian-ppc64.qcow2"]
   machine_type       = "pseries"
   memory             = 1024
