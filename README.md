@@ -35,17 +35,17 @@ Build and publish your box:
 
 Put the following settings into your Vagrantfile:
 
-    Vagrant.configure("2") do |config|
-      config.vm.box = "myname/mybox-ppc64"
-      config.vm.define "libvirt" do |libvirt|
-        config.vm.provider :libvirt do |v|
-          v.driver = "qemu"
-          v.machine_arch = "ppc64"
-          v.machine_type = "pseries"
-          v.cpu_mode = "custom"
-          v.cpu_model = "POWER8"
-          v.video_type = "vga"
-        end
+    Vagrant.configure('2') do |config|
+      config.vm.box = 'myname/mybox-ppc64'
+      config.vm.box_architecture = 'ppc64'
+      config.vm.provider :libvirt do |v|
+        v.driver = 'qemu'
+        v.machine_arch = 'ppc64'
+        v.machine_type = 'pseries'
+        v.cpu_mode = 'custom'
+        v.cpu_model = 'POWER8'
+        v.video_type = 'vga'
+        v.features = []
       end
     end
 
