@@ -1,5 +1,9 @@
 Revision history for packer-debian-ppc64
 
+1.002  2023-11-04 08:42:45 CET
+
+  - Update the Vagrantfile
+
 1.001  2023-07-21 17:06:07 CEST
 
   - Add a required_plugins block
