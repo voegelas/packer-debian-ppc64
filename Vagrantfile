@@ -17,6 +17,7 @@ Vagrant.configure('2') do |config|
       v.cpu_mode = 'custom'
       v.cpu_model = 'POWER8'
       v.video_type = 'vga'
+      v.features = []
     end
 
     config.vm.provision 'shell', inline: 'echo Hello, World'
