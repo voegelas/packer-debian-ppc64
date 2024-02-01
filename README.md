@@ -29,7 +29,7 @@ Build and publish your box:
 
     packer build \
       -var 'box_tag=myname/mybox-ppc64' \
-      -var 'version=20230721' \
+      -var 'version=20240201' \
       -var 'version_description=My custom box' \
       box-config.pkr.hcl
 
@@ -51,7 +51,7 @@ Put the following settings into your Vagrantfile:
 
 ## LICENSE AND COPYRIGHT
 
-Copyright (C) 2023 Andreas Vögele
+Copyright (C) 2024 Andreas Vögele
 
 This program is free software; you can redistribute and modify it under the
 terms of the ISC license.
